@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Primenumbers">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="D:/Softwares/eclipse-M/plugins/org.testng.eclipse_6.8.6.20130914_0724/lib/testng.jar"/>
+    </path>
+    <path id="Primenumbers.classpath">
+        <pathelement location="bin"/>
+        <path refid="TestNG.libraryclasspath"/>
+        <pathelement location="../../../../../Jars2/apache-commons-lang.jar"/>
+        <pathelement location="../../../../../Jars2/com.mercury.qualitycenter.otaclient-9.2.jar"/>
+        <pathelement location="../../../../../Jars2/com4j-20110320.jar"/>
+        <pathelement location="../../../../../Jars2/commons-cli-2.0.jar"/>
+        <pathelement location="../../../../../Jars2/commons-configuration-1.10.jar"/>
+        <pathelement location="../../../../../Jars2/commons-io-2.4.jar"/>
+        <pathelement location="../../../../../Jars2/commons-lang3-3.3.2.jar"/>
+        <pathelement location="../../../../../Jars2/gson-2.2.2.jar"/>
+        <pathelement location="../../../../../Jars2/json-simple-1.1.1.jar"/>
+        <pathelement location="../../../../../Jars2/jxl.jar"/>
+        <pathelement location="../../../../../Jars2/log4j-1.2.17.jar"/>
+        <pathelement location="../../../../../Jars2/modules.jar"/>
+        <pathelement location="../../../../../Jars2/org.apache.commons.httpclient.jar"/>
+        <pathelement location="../../../../../Jars2/org-apache-commons-logging.jar"/>
+        <pathelement location="../../../../../Jars2/org-apache-ws-commons-util.jar"/>
+        <pathelement location="../../../../../Jars2/sikuli-script.jar"/>
+        <pathelement location="../../../../../Jars2/slf4j-api-1.7.10.jar"/>
+        <pathelement location="../../../../../Jars2/slf4j-simple-1.7.10.jar"/>
+        <pathelement location="../../../../../Jars2/testlink-api-client-2.0.jar"/>
+        <pathelement location="../../../../../Jars2/testlink-java-api-1.9.4-0.jar"/>
+        <pathelement location="../../../../../Jars2/xmlrpc-client-3.1.3.jar"/>
+        <pathelement location="../../../../../Jars2/xmlrpc-common-3.1.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/poi-3.9-20121203.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/poi-examples-3.9-20121203.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/poi-excelant-3.9-20121203.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/poi-ooxml-3.9-20121203.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/poi-ooxml-schemas-3.9-20121203.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/poi-scratchpad-3.9-20121203.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/ooxml-lib/dom4j-1.6.1.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/ooxml-lib/stax-api-1.0.1.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/ooxml-lib/xmlbeans-2.3.0.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/lib/commons-codec-1.5.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/lib/commons-logging-1.1.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/lib/junit-3.8.1.jar"/>
+        <pathelement location="../../../../../Jars2/poi-3.9/lib/log4j-1.2.13.jar"/>
+        <pathelement location="../../../../../Jars2/selenium-server-standalone-2.53.0.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Primenumbers.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Alert">
+        <java classname="javaprograms.Alert" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Closeframes">
+        <java classname="javaprograms.Closeframes" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Closeframesorde">
+        <java classname="javaprograms.Closeframesorde" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="dupluicate">
+        <java classname="javaprograms.dupluicate" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="evennumbers">
+        <java classname="javaprograms.evennumbers" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="fibonacci">
+        <java classname="javaprograms.fibonacci" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="fibonaccirecursive">
+        <java classname="javaprograms.fibonaccirecursive" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="fibonacciseries">
+        <java classname="javaprograms.fibonacciseries" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Framecount">
+        <java classname="javaprograms.Framecount" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="IElaunch">
+        <java classname="javaprograms.IElaunch" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="ircrc">
+        <java classname="javaprograms.ircrc" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="jqueryframe">
+        <java classname="javaprograms.jqueryframe" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="New_configuration (1)">
+        <java classname="sun.applet.AppletViewer" dir="." failonerror="true" fork="yes">
+            <arg line="New_configuration (1).html"/>
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="New_configuration">
+        <java classname="" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Pallindrome">
+        <java classname="javaprograms.Pallindrome" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Penske">
+        <java classname="javaprograms.Penske" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="prime">
+        <java classname="javaprograms.prime" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Primenumbers">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <classpath refid="Primenumbers.classpath"/>
+        </junit>
+    </target>
+    <target name="Printandstar">
+        <java classname="javaprograms.Printandstar" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Printstar">
+        <java classname="javaprograms.Printstar" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Reverse">
+        <java classname="javaprograms.Reverse" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Reverseiwithoutrec">
+        <java classname="javaprograms.Reverseiwithoutrec" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Reverseiwithoutrecchararray">
+        <java classname="javaprograms.Reverseiwithoutrecchararray" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Secondlargest">
+        <java classname="javaprograms.Secondlargest" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="Secondlargestwithoutswap">
+        <java classname="javaprograms.Secondlargestwithoutswap" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="WHexception">
+        <java classname="javaprograms.WHexception" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="WHusingiterator">
+        <java classname="javaprograms.WHusingiterator" failonerror="true" fork="yes">
+            <classpath refid="Primenumbers.classpath"/>
+        </java>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>

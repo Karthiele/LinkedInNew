@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LinkiedIn">
+	<parameter name="browser" value="Firefox" />
+	<parameter name="browser2" value="Chrome" />
+	<test verbose="2" name="Linkedin">
+
+		<groups>
+			<run>
+				
+			<include name="Advanced Search"></include>
+			<include name="Advanced Search"></include>
+			</run>
+		</groups>
+
+		<classes>
+			<class name="groups.TestCase_01" />
+			<class name="groups.TestCase_02" />
+			<class name="groups.TestCase_03" />
+			<class name="groups.TestCase_04" />
+
+		</classes>		
+
+	</test>
+</suite>  

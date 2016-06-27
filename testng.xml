@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="groups.threadpool"/>
+      <class name="rnd.Priority"/>
+      <class name="testng.TestCase_04"/>
+      <class name="testcases.TestCase_02"/>
+      <class name="testng.TestCase_01"/>
+      <class name="testcases.TestCase_03"/>
+      <class name="testng.TestCase_02"/>
+      <class name="testcases.TestCase_04"/>
+      <class name="testcases.TestCase_05"/>
+      <class name="testng.TestCase_03"/>
+      <class name="groups.Data"/>
+      <class name="rnd.Datakarthiiterator"/>
+      <class name="groups.TestCase_02"/>
+      <class name="testcases.TestCase_01"/>
+      <class name="groups.TestCase_01"/>
+      <class name="groups.TestCase_04"/>
+      <class name="groups.TestCase_03"/>
+      <class name="groups.TestCase_06"/>
+      <class name="groups.TestCase_05"/>
+      <class name="testcases.TestCase_06"/>
+      <class name="rnd.First"/>
+      <class name="testcases.TestCase_07"/>
+      <class name="excelData.Getdata"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

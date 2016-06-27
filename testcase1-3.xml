@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+	<groups>
+		<run>
+			<include name="Advanced Search">
+			</include>
+			<include name="Profile">
+			</include>
+		</run>
+	</groups>
+	<parameter name="browser2" value="Chrome" />
+	<parameter name="browser" value="Firefox" />
+	<test verbose="2" name="Linked">
+		<classes>
+			<!-- <class name="groups.TestCase_01" />
+			<class name="groups.TestCase_02" />
+			<class name="groups.TestCase_03" /> -->
+			<class name="groups.TestCase_05" />
+		</classes>
+	</test> <!-- Default test -->
+</suite> <!-- Default suite -->

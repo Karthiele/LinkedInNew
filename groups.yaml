@@ -1,0 +1,8 @@
+name: LinkiedIn
+tests:
+  - name: Linkedin
+    verbose: 2
+    excludedGroups: [ Profile ]
+    classes:
+      - groups.TestCase_01
+
